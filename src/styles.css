@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap");
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+:root {
+  --text-color: #d7ffbc;
+  --white-color: #fff;
+  --button-color: #19456b;
+  --input-color: #a2d0c1;
+}
+body {
+  margin: 0px;
+  background: linear-gradient(20deg, red, blue);
+  background-attachment: fixed;
+  /* text-align: center; */
+}
+header {
+  font-family: "Kaushan Script", cursive;
+  text-align: center;
+  color: white;
+  margin: 2rem auto;
+  padding: 20px;
+}
+
+.intro-para {
+  font-family: "Courgette", cursive;
+  text-align: left;
+  margin: 2rem 12rem;
+  color: var(--text-color);
+}
+.main-div {
+  margin: 4rem 12rem 6rem;
+  border: 1px solid;
+  border-style: none;
+  background-color: var(--white-color);
+  border-radius: 20px 40px;
+  padding: 1rem 2rem;
+  text-align: center;
+  outline: none;
+  width: 25%;
+}
+
+input {
+  display: block;
+  margin: 1rem auto;
+  background-color: var(--input-color);
+  opacity: 0.4;
+  border-style: none;
+  outline: none;
+  border-radius: 20px;
+  width: 80%;
+  height: 6vh;
+  padding: 10px;
+}
+
+button {
+  padding: 5px 20px;
+  margin: 0.5rem auto;
+  background-color: var(--button-color);
+  border-radius: 20px;
+  border-style: none;
+  outline: none;
+  opacity: 0.6;
+}
+
+.result-div {
+  font-family: "Kaushan Script", cursive;
+  margin: 2rem auto;
+  font-size: 40px;
+  color: var(--text-color);
+}
+
+img {
+  float: right;
+  margin: -35rem 4rem 2rem 6rem;
+}
+
+footer {
+  font-family: "Courgette", cursive;
+  margin: 2rem auto 2rem;
+  color: var(--text-color);
+}
+
+footer a {
+  text-decoration: none;
+}
+
+@media (max-width: 1112px) {
+  .intro-para {
+    margin: 2rem 8rem;
+  }
+  .main-div {
+    margin: 4rem 8rem 6rem;
+  }
+
+  img {
+    margin: -35rem 4rem 2rem 4rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .main-div {
+    margin: 4rem auto 2rem;
+    width: 50%;
+  }
+  img {
+    width: 80%;
+    float: none;
+    margin: 2rem auto;
+  }
+  .intro-para {
+    text-align: center;
+    margin: 2rem auto;
+  }
+}
