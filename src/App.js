@@ -2,23 +2,24 @@ import React, { useState } from "react";
 import "./styles.css";
 
 export default function App() {
-  var [birthDate, setBirthDate] = useState("");
-  var [luckyNumber, setLuckyNumber] = useState("");
-  var [luckyResult, setLuckyResult] = useState("");
-  var [imageURL, setImageURL] = useState("");
-  var [error, setError] = useState("");
+  let [birthDate, setBirthDate] = useState("");
+  let [luckyNumber, setLuckyNumber] = useState("");
+  let [luckyResult, setLuckyResult] = useState("");
+  let [imageURL, setImageURL] = useState("");
+  let [error, setError] = useState("");
 
-  function inputLuckyHandler(event) {
+  const inputLuckyHandler = (event) => {
     luckyNumber = event.target.value;
     setLuckyNumber(luckyNumber);
-  }
-  function inputBirthHandler(event) {
+  };
+
+  const inputBirthHandler = (event) => {
     birthDate = event.target.value;
     setBirthDate(birthDate);
-  }
+  };
 
-  function clickHandler() {
-    var sum = birthDate
+  const clickHandler = () => {
+    let sum = birthDate
       .toString()
       .replace(/[-/]/g, "")
       .split("")
@@ -26,7 +27,7 @@ export default function App() {
       .reduce(function (a, b) {
         return a + b;
       }, 0);
-    var luckyValue = sum % luckyNumber;
+    const luckyValue = sum % luckyNumber;
 
     if (luckyValue === 0) {
       setImageURL("images/lucky-gif.gif");
@@ -35,7 +36,7 @@ export default function App() {
       setImageURL("images/monkey-nope.gif");
       setLuckyResult("Nope! your birthday is not lucky one");
     }
-  }
+  };
   return (
     <div className="App">
       <header>
